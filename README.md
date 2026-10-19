@@ -1,4 +1,5 @@
-This is a live demo  at https://NajibaTagougui.github.io/ChemRegApp/
+
+This is a live demo at https://NajibaTagougui.github.io/ChemRegApp/
 
 # ChemRegNet
 
@@ -55,33 +56,44 @@ source venv/bin/activate        # Linux/macOS
 # Install dependencies
 pip install -r requirements.txt
 
-# Quick Start
+
+---
+
+## Quick Start
+
 Train and evaluate on ESOL with the default configuration:
+
 
 python main.py --dataset esol --seed 42
 
-# Datasets
+---
+
+## Datasets
+
 The five benchmarks used in the paper are downloaded at runtime from their public sources. No data files are stored in this repository.
 
-Dataset	N	Task	Metric	Source
-ESOL	1,128	logS regression	RMSE	DeepChem
-Lipophilicity	4,200	logD regression	RMSE	DeepChem
-FreeSolv	642	hydration free energy	RMSE	MoleculeNet
-BACE	1,513	binary classification	AUROC	MoleculeNet
-BBBP	2,039	binary classification	AUROC	MoleculeNet
+| Dataset | N | Task | Metric | Source |
+|---|---|---|---|---|
+| ESOL | 1,128 | logS regression | RMSE | DeepChem |
+| Lipophilicity | 4,200 | logD regression | RMSE | DeepChem |
+| FreeSolv | 642 | hydration free energy | RMSE | MoleculeNet |
+| BACE | 1,513 | binary classification | AUROC | MoleculeNet |
+| BBBP | 2,039 | binary classification | AUROC | MoleculeNet |
+
 ESOL and Lipophilicity are loaded directly from:
 
-https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/delaney-processed.csv
-
-https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/Lipophilicity.csv
+- https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/delaney-processed.csv
+- https://deepchemdata.s3-us-west-1.amazonaws.com/datasets/Lipophilicity.csv
 
 FreeSolv, BACE, and BBBP are loaded through the MoleculeNet collection.
 
 All five datasets are distributed under open licenses without restrictions.
-----
 
-# Project Structure
+---
 
+## Project Structure
+
+```
 chemregnet/
 ├── README.md                  <- this file
 ├── LICENSE                    <- MIT license
@@ -97,10 +109,15 @@ chemregnet/
 │
 ├── data/                      <- downloaded data (gitignored)
 ├── evaluation_outputs/        <- per-seed metrics, attribution values
-
-# Contact
-Najiba Tagougui
-Department of Computer Science Engineering, ISIMS
-University of Sfax, Sfax 3025, Tunisia
-Email: najiba.tagougui@isims.usf.tn
 └── figures/                   <- generated tables and figures
+```
+
+---
+
+## Contact
+
+Najiba Tagougui  
+Department of Computer Science Engineering, ISIMS  
+University of Sfax, Sfax 3025, Tunisia  
+Email: najiba.tagougui@isims.usf.tn
+```
